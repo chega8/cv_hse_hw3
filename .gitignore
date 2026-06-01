@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+
+# HuggingFace / datasets кэш
+.cache/
+
+# --- Тяжёлые артефакты обучения ---
+# Чекпойнты (~166 MB каждый). Для сдачи приложите best.pt отдельно
+# (release / git-lfs / облако), а не в основной git-истории.
+outputs/checkpoints/*.pt
+
+# Chrome trace профайлера (~25 MB). Сводка outputs/profiler/summary.txt — текстовая, остаётся.
+outputs/profiler/*.json
+
+# Лог обучения
+outputs/train.log
+
+# Что ОСТАЁТСЯ в репозитории (нужно для сдачи):
+#   outputs/runs/                 — логи TensorBoard
+#   outputs/figures/*.png         — графики потерь, mAP, предсказания, error analysis
+#   outputs/metrics.md            — таблица метрик
+#   outputs/error_analysis.md     — таблица ошибок
+#   outputs/history.json          — история по эпохам
+#   outputs/config.json           — гиперпараметры
+#   outputs/profiler/summary.txt  — сводка профайлера

@@ -1,0 +1,8 @@
+{
+  "localization_err": 440,
+  "background_fp": 293,
+  "correct": 55,
+  "classification_err": 105,
+  "duplicate": 79,
+  "missed_gt": 152
+}

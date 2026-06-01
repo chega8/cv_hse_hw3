@@ -1,0 +1,19 @@
+# Core
+torch>=2.2
+torchvision>=0.17
+transformers>=4.40
+datasets>=2.18
+accelerate>=0.27
+
+# Metrics / detection
+torchmetrics>=1.2
+pycocotools>=2.0
+
+# Logging / viz
+tensorboard>=2.13
+matplotlib>=3.5
+pillow>=9.0
+
+# NOTE: на Apple Silicon (MPS) обучение работает из коробки.
+# Если в окружении конфликт scipy/numpy, обновите scipy:
+#   pip install --upgrade "scipy>=1.10,<1.14"
