@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Полный тренировочный цикл fine-tuning DETR.
 
 Делает:
@@ -16,6 +17,14 @@
   python src/train.py --epochs 30
 """
 from __future__ import annotations
+
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+
+import requests, urllib3
+urllib3.disable_warnings()
+_orig_send = requests.Session.send
+requests.Session.send = lambda self, *a, **kw: _orig_send(self, *a, **{**kw, "verify": False})
 
 import json
 import os

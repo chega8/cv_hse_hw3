@@ -1,0 +1,23 @@
+{
+  "dataset_name": "cppe-5",
+  "train_size": 300,
+  "val_size": 100,
+  "val_fraction": 0.1,
+  "image_short": 600,
+  "image_long": 1000,
+  "augment": true,
+  "model_name": "facebook/detr-resnet-50",
+  "epochs": 12,
+  "batch_size": 4,
+  "lr": 0.0001,
+  "lr_backbone": 1e-05,
+  "weight_decay": 0.0001,
+  "grad_clip": 0.1,
+  "num_workers": 0,
+  "seed": 42,
+  "output_dir": "outputs",
+  "log_every": 10,
+  "eval_threshold": 0.0,
+  "viz_threshold": 0.5,
+  "profile": true
+}
